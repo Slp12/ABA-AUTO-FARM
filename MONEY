@@ -14,7 +14,7 @@ _G.MinTimer = 130
 local function notify(text)
     game.StarterGui:SetCore("SendNotification", {
         Title = "RZiln's AFK hop",
-        Duration = 60,
+        Duration = 130,
         Text = text
     })
 end
@@ -52,11 +52,11 @@ if game.GameId == 578392296 then
         notify("Server Hopping")
         task.wait(1)
         serverHop()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/ServerHop.lua", true))()
     else
         notify("Server Hopping")
         serverHop()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/ServerHop.lua", true))()
     end
 
 end
