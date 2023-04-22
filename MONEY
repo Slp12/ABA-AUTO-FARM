@@ -22,10 +22,10 @@ end
 local function serverHop()
     if syn then
         syn.queue_on_teleport(
-            '')
+            'loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))()')
     else
         queue_on_teleport(
-            '')
+            'loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))()')
     end
 
 end
@@ -52,11 +52,11 @@ if game.GameId == 578392296 then
         notify("Server Hopping")
         task.wait(1)
         serverHop()
-        ", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))
     else
         notify("Server Hopping")
         serverHop()
-       ", true))()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))()
     end
 
 end
