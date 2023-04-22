@@ -9,12 +9,12 @@ if game.PlaceId == 5411459567 then
         task.wait(1)
     until game.Workspace.Message
 end
-_G.MinTimer = 130
+_G.MinTimer = 100
 
 local function notify(text)
     game.StarterGui:SetCore("SendNotification", {
-        Title = "RZiln's AFK hop",
-        Duration = 130,
+        Title = "Slp's Money Hopper",
+        Duration = 60,
         Text = text
     })
 end
@@ -22,10 +22,10 @@ end
 local function serverHop()
     if syn then
         syn.queue_on_teleport(
-            'loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))()')
+            'loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/main.lua", true))()')
     else
         queue_on_teleport(
-            'loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY.lua", true))()')
+            'loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/main.lua", true))()')
     end
 
 end
@@ -44,11 +44,11 @@ if game.GameId == 578392296 then
         return time
     end
 
-    if timerCheck() <= _G.MinTimer then
+    if timerCheck(100) <= _G.MinTimer then
         notify("Waiting for reward")
         repeat
             task.wait()
-        until timerCheck() > _G.MinTimer
+        until timerCheck(100) > _G.MinTimer
         notify("Server Hopping")
         task.wait(1)
         serverHop()
@@ -56,7 +56,7 @@ if game.GameId == 578392296 then
     else
         notify("Server Hopping")
         serverHop()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/ServerHop.lua", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/ServerHop.lua", true))()
     end
 
 end
