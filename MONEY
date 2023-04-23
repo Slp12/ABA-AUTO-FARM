@@ -14,7 +14,7 @@ _G.MinTimer = 100
 local function notify(text)
     game.StarterGui:SetCore("SendNotification", {
         Title = "Slp's Money Hopper",
-        Duration = 60,
+        Duration = 100,
         Text = text
     })
 end
@@ -22,10 +22,10 @@ end
 local function serverHop()
     if syn then
         syn.queue_on_teleport(
-            'loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/main.lua", true))()')
+            'loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY", true))()')
     else
         queue_on_teleport(
-            'loadstring(game:HttpGet("https://raw.githubusercontent.com/RZiln/GayBloxScripts/master/ABA/main.lua", true))()')
+            'loadstring(game:HttpGet("https://raw.githubusercontent.com/Slp12/ABA-AUTO-FARM/main/MONEY", true))()')
     end
 
 end
